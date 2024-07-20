@@ -83,7 +83,6 @@ net = addLayers(net,tempNet);
 tempNet = depthConcatenationLayer(2,"Name","depthcat");
 net = addLayers(net,tempNet);
 
-% 清理辅助变量
 clear tempNet;
 
 net = connectLayers(net,"gelu_0","fc_2");
