@@ -14,7 +14,7 @@ ValidationLabel(1,:) = 10*ValidationLabel(1,:);
 ValidationLabel(2,:) = 5*ValidationLabel(2,:);
 YVal = dlarray(ValidationLabel,"CB");
 
-Bayes Opt
+% Bayes Opt
 vars = [
     optimizableVariable('numUnits_1st', [10, 1000], 'Type', 'integer')
     optimizableVariable('ifnorm', [0, 1], 'Type', 'integer')
