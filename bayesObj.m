@@ -2,7 +2,6 @@ function valError = bayesObj(xTrain, yTrain, xVal, yVal, params)
 rng(0)
 input_size = 252;
 net = dlnetwork;
-params.numLayers_1 = 6;
 
 if(params.ifnorm==0)
     tempNet = [
