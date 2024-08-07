@@ -20,6 +20,7 @@ vars = [
     optimizableVariable('ifnorm', [0, 1], 'Type', 'integer')
     optimizableVariable('numUnits_1', [10, 1000], 'Type', 'integer')
     optimizableVariable('numUnits_2', [10, 1000], 'Type', 'integer')
+    optimizableVariable('numLayers_1',[1, 7], 'Type', 'integer')
     optimizableVariable('numLayers_2', [2, 3], 'Type', 'integer')
 ];
  
