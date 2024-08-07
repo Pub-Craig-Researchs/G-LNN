@@ -35,41 +35,41 @@ results = bayesopt(minfn, vars, ...
 % Display the best hyperParams
 bestParams = bestPoint(results)
 
-numUnites_1 = bestParams.numUnites_1;
-numUnites_2 = bestParams.numUnites_2;
-numUnites_1st = bestParams.numUnites_1st;
+numUnits_1 = bestParams.numUnits_1;
+numUnits_2 = bestParams.numUnits_2;
+numUnits_1st = bestParams.numUnits_1st;
 net = dlnetwork;
 tempNet = [
     featureInputLayer(252,"Name","input","Normalization","rescale-zero-one")
-    fullyConnectedLayer(numUnites_1st,"Name","fc_1")
+    fullyConnectedLayer(numUnits_1st,"Name","fc_1")
     geluLayer("Name","gelu_0")];
 net = addLayers(net,tempNet);
 
 tempNet = [
-    fullyConnectedLayer(numUnites_1,"Name","fc_2")
+    fullyConnectedLayer(numUnits_1,"Name","fc_2")
     preluLayer("Name","prelu_1")
-    fullyConnectedLayer(numUnites_1,"Name","fc_3")
+    fullyConnectedLayer(numUnits_1,"Name","fc_3")
     preluLayer("Name","prelu_2")
-    fullyConnectedLayer(numUnites_1,"Name","fc_4")
+    fullyConnectedLayer(numUnits_1,"Name","fc_4")
     preluLayer("Name","prelu_+1")
-    fullyConnectedLayer(numUnites_1,"Name","fc_+1")
+    fullyConnectedLayer(numUnits_1,"Name","fc_+1")
     preluLayer("Name","prelu_+2")
-    fullyConnectedLayer(numUnites_1,"Name","fc_+2")
+    fullyConnectedLayer(numUnits_1,"Name","fc_+2")
     preluLayer("Name","prelu_+3")
-    fullyConnectedLayer(numUnites_1,"Name","fc_5")
+    fullyConnectedLayer(numUnits_1,"Name","fc_5")
     layerNormalizationLayer("Name","layernorm_4")];
 net = addLayers(net,tempNet);
 
 tempNet = [
-    fullyConnectedLayer(numUnites_2,"Name","std_1")
+    fullyConnectedLayer(numUnits_2,"Name","std_1")
     geluLayer("Name","gelu_2")
-    fullyConnectedLayer(numUnites_2,"Name","std_2")
+    fullyConnectedLayer(numUnits_2,"Name","std_2")
     geluLayer("Name","gelu_3")
     fullyConnectedLayer(2,"Name","op_2")];
 net = addLayers(net,tempNet);
 
 tempNet = [
-    fullyConnectedLayer(numUnites_1,"Name","Res")
+    fullyConnectedLayer(numUnits_1,"Name","Res")
     layerNormalizationLayer("Name","layernorm_5")];
 net = addLayers(net,tempNet);
 
