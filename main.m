@@ -35,9 +35,9 @@ results = bayesopt(minfn, vars, ...
 % Display the best hyperParams
 bestParams = bestPoint(results)
 
-numUnites_1 = 600;
-numUnites_2 = 100;
-numUnites_1st = 600;
+numUnites_1 = bestParams.numUnites_1;
+numUnites_2 = bestParams.numUnites_2;
+numUnites_1st = bestParams.numUnites_1st;
 net = dlnetwork;
 tempNet = [
     featureInputLayer(252,"Name","input","Normalization","rescale-zero-one")
