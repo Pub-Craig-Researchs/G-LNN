@@ -5,4 +5,4 @@ G-LPPLS-NN is a model specifically designed for the estimation of critical point
 
 Most codes have been made available, for more information, please reach out to J. Ma.
 
-Note: please make sure that you have MathType installed or have the math font that required by mathtype when reading our article in pdf or word format; otherwise, you may encounter errors in the formulas.
+Note: please make sure that you have MathType installed or have the math font that required by MathType when reading our article in pdf or word format; otherwise, you may encounter errors in the formulas.
